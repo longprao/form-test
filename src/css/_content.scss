@@ -1,0 +1,154 @@
+.post-content {
+  @include clearfix;
+  word-break: break-word;
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+
+  a:not(.btn) {
+    display: inline;
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--red);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  p {
+    margin: 0 0 15px;
+  }
+}
+
+.btn {
+  color: var(--white);
+  padding: 15px 20px;
+  text-align: center;
+  user-select: none;
+  transition: $transition;
+  font-size: 17px;
+  font-weight: 600;
+  min-width: 160px;
+
+  &:hover {
+    opacity: $hoverOpacity;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+
+  &.disabled {
+    background: rgba(31, 53, 77, 0.3);
+  }
+}
+
+.btn-primary {
+  background: var(--blue);
+}
+
+.dropdown-popup-wrapper {
+  &:not(:hover) {
+    .dropdown-popup {
+      display: none;
+    }
+  }
+}
+
+.dropdown-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: var(--white);
+  box-shadow: $boxShadow;
+  z-index: 10;
+  max-height: 200px;
+  overflow: auto;
+
+  .item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray);
+    transition: $transition;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.dropdown-select {
+  position: relative;
+
+  .toggle {
+    position: relative;
+    padding-right: 35px;
+
+    .i {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translate(0, -50%);
+      font-size: 12px;
+      color: var(--gray);
+    }
+  }
+
+  .dropdown-popup {
+    &:not(.active) {
+      display: none;
+    }
+
+    .item {
+      text-align: left;
+    }
+  }
+}
+
+.react-datepicker-wrapper {
+  display: block;
+}
+
+.red {
+  color: var(--red);
+}
+
+.App {
+  padding: 30px 0;
+}

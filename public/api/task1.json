@@ -1,0 +1,73 @@
+[
+  {
+    "_id" : "606ca6efb59a183f338c0ce4",
+    "name" : "First name",
+    "readonly" : false,
+    "required" : true,
+    "label" : "First name",
+    "placeholder": "Give your first name",
+    "structuredField" : "FIRST_NAME",
+    "type" : "TEXT_FIELD"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0ce5",
+    "name" : "Last name",
+    "readonly" : false,
+    "required" : false,
+    "label" : "Last name",
+    "structuredField" : "LAST_NAME",
+    "type" : "TEXT_FIELD"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0ce6",
+    "name" : "Multi Select Fields",
+    "required" : false,
+    "label" : "Multi Select Fields",
+    "checkboxList" : [
+      {
+        "value" : "value 1",
+        "subtitle" : "",
+        "disabled" : false,
+        "checked" : false,
+        "required" : false
+      },
+      {
+        "value" : "value 2",
+        "subtitle" : "",
+        "disabled" : false,
+        "checked" : false,
+        "required" : false
+      }
+    ],
+    "type" : "CHECKBOX"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0ce7",
+    "name" : "Date Input",
+    "readonly" : false,
+    "required" : false,
+    "label" : "Date Input",
+    "type" : "DATE_INPUT_DROPDOWN"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0ce8",
+    "name" : "Form spacing",
+    "height" : "25",
+    "label" : "Form spacing",
+    "type" : "SPACING"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0ce9",
+    "name" : "Country Dropdown",
+    "label" : "Country Dropdown",
+    "type" : "COUNTRY_SELECT"
+  },
+  {
+    "_id" : "606ca6efb59a183f338c0cea",
+    "name" : "File Field",
+    "multiple" : false,
+    "required" : false,
+    "label" : "File Field",
+    "type" : "FILE_INPUT"
+  }
+]
