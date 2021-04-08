@@ -11,7 +11,7 @@ import FieldDatePicker from './components/form/FieldDatepicker';
 import FieldErrorMessage from './components/form/FieldErrorMessage';
 import FieldFile from './components/form/FieldFile';
 import FieldText from './components/form/FieldText';
-import { validateRequired } from './utils/validations';
+import { validateCheckboxes, validateRequired } from './utils/validations';
 
 const Components: { [key: string]: FC<any> } = {
   TEXT_FIELD: FieldText,
@@ -68,11 +68,7 @@ function App() {
   const validationSchema = data.reduce(
     (a, b) => ({
       ...a,
-      [slug(b.name)]: b.required
-        ? b.type === 'CHECKBOX'
-          ? yup.array().min(1, 'At least one must be selected')
-          : validateRequired
-        : undefined,
+      [slug(b.name)]: b.required ? (b.type === 'CHECKBOX' ? validateCheckboxes : validateRequired) : undefined,
     }),
     {},
   );
